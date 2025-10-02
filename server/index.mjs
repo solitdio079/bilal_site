@@ -7,6 +7,7 @@ import notificationRouter from "./routes/notifications.mjs"
 import commentRouter from "./routes/comments.mjs"
 import authRouter from "./routes/auth.mjs"
 import postRouter from "./routes/posts.mjs"
+import photoRouter from "./routes/photos.mjs"
 import editorRouter from "./routes/editor.mjs"
 
 main().catch(err => console.log(err));
@@ -32,6 +33,7 @@ app.use("/users",userRouter)
 app.use("/auth",authRouter)
 app.use("/notifications",notificationRouter)
 app.use("/posts",postRouter)
+app.use("/photos",photoRouter)
 app.use("/comments",commentRouter)
 app.use("/editor", editorRouter)
 
