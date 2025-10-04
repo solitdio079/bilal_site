@@ -11,7 +11,8 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import { useEffect } from 'react';
-import SplashScreen from "./components/SplashScreen";
+import SplashScreen from "./comps/SplashScreen";
+import ObserverProvider from "./comps/ObserverProvider";
 //import { useLocation } from 'react-router-dom';
 
 async function loadFlyonUI() {
@@ -80,7 +81,7 @@ export default function App() {
     });*/
   }, [location.pathname]); // Runs on route change + initial mount
 
-  return <div data-theme="light"> <Outlet /></div>;
+  return <ObserverProvider><div data-theme="light"> <Outlet /></div></ObserverProvider> ;
 }
 export function HydrateFallback() {
   return <SplashScreen />;

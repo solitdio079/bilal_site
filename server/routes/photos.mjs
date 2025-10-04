@@ -20,15 +20,22 @@ router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
   checkIfAdmin,
-  upload.single("image"),
+  upload.array('images', 12),
   async (req, res) => {
-    const image = req.file.filename;
+  const newPhotos=[]
+
+   
 
     try {
-      const newPhoto = new Photos({ image });
-      await newPhoto.save();
+        req.files.forEach(async(imageFile) => {
+            const image = imageFile.filename;
+            const newPhoto = new Photos({ image });
+            await newPhoto.save();
+            newPhotos.push(newPhoto)
+    
+        })
       // Maybe send notification later
-      return res.send({ msg: "Photo created!", newPhoto });
+      return res.send({ msg: "Photos created!", newPhotos });
     } catch (error) {
       return res.send({ error: error.msg });
     }

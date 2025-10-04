@@ -11,7 +11,7 @@ import Embed from "@editorjs/embed";
 import { useEffect, useRef, useState } from "react";
 import { redirect, useFetcher } from "react-router";
 import toast, {Toaster} from "react-hot-toast"
-import CommentList from "~/components/CommentList";
+import CommentList from "~/comps/CommentList";
 
 export async function clientLoader({ params }: Route.ClientLoaderArgs) {
   const { id } = params;

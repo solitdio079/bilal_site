@@ -78,6 +78,38 @@ export default function Admin() {
                 </li>
               </ul>
             </li>
+
+            <li className="space-y-0.5">
+              <a
+                className="collapse-toggle collapse-open:bg-base-content/10"
+                id="menu-app"
+                data-collapse="#menu-app-collapse2"
+              >
+                <span className="icon-[tabler--photo] size-5"></span>
+                Photos
+                <span className="icon-[tabler--chevron-down] collapse-open:rotate-180 size-4 transition-all duration-300"></span>
+              </a>
+              <ul
+                id="menu-app-collapse2"
+                className="collapse hidden w-auto space-y-0.5 overflow-hidden transition-[height] duration-300"
+                aria-labelledby="menu-app"
+              >
+                <li>
+                  <NavLink to="createPhoto">
+                    <span className="icon-[tabler--plus] size-5"></span>
+                    Create
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="allPhotos">
+                    <span className="icon-[tabler--calendar] size-5"></span>
+                    All
+                  </NavLink>
+                </li>
+              </ul>
+            </li>
+
+
             <li>
               <a href="#">
                 <span className="icon-[tabler--login] size-5"></span>

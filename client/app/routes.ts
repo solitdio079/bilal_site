@@ -7,9 +7,13 @@ export default [layout("./routes/layout.tsx", [
     route("singlePost/:id", "./routes/singlePost.tsx"),
     route("admin","./routes/admin.tsx", [
         route("createPost", "./routes/admin/Posts/createPost.tsx"),
+        route("createPhoto", "./routes/admin/Photos/createPhoto.tsx"),
         route("allPosts", "./routes/admin/Posts/allPosts.tsx"),
+        route("allPhotos", "./routes/admin/Photos/allPhotos.tsx"),
+        route("redirectPhotos", "./routes/admin/Photos/redirect.tsx"),
         route("editPost/:id", "./routes/admin/Posts/editPost.tsx"),
         route("deletePost/:id", "./routes/admin/Posts/deletePost.tsx"),
+        route("deletePhoto/:id", "./routes/admin/Photos/deletePhotos.tsx"),
         route("editUser", "./routes/admin/Users/editUser.tsx"),
     ]),
     route("logout", "./routes/logout.tsx"),

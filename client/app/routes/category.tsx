@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
-import InfiniteEntity from "~/components/InfiniteEntity";
-import PostCard from "~/components/PostCard";
+import InfiniteEntity from "~/comps/InfiniteEntity";
+import PostCard from "~/comps/PostCard";
 import { serverUrl } from "~/utils/serverUrl";
 
 export default function Category() {
