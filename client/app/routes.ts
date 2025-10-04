@@ -3,6 +3,8 @@ import { type RouteConfig, index,layout,route } from "@react-router/dev/routes";
 export default [layout("./routes/layout.tsx", [
     index("./routes/home.tsx"),
     route("verify","./routes/verify.tsx"),
+    route("portfolio","./routes/portfolio.tsx"),
+    route("blog","./routes/blog.tsx"),
     route("category/:category", "./routes/category.tsx"),
     route("singlePost/:id", "./routes/singlePost.tsx"),
     route("admin","./routes/admin.tsx", [

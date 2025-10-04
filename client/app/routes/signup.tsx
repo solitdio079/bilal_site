@@ -61,7 +61,7 @@ export default function Signup() {
 
   return (
     <>
-      <div className="bg-base-100 flex h-auto min-h-screen items-center justify-center overflow-x-hidden py-10">
+      <div data-theme="black" className="flex h-auto min-h-screen items-center justify-center overflow-x-hidden py-10">
         <div className="relative flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="absolute">
             <svg
@@ -108,19 +108,14 @@ export default function Signup() {
           </div>
           <div className="bg-base-100 shadow-base-300/20 z-1 w-full space-y-6 rounded-xl p-6 shadow-md sm:min-w-md lg:p-8">
             <div className="flex items-center gap-3">
-              <img
-                src="https://cdn.flyonui.com/fy-assets//logo/logo.png"
-                className="size-8"
-                alt="brand-logo"
-              />
-              <h2 className="text-base-content text-xl font-bold">FlyonUI</h2>
+            <Link className="link text-base-content link-neutral text-4xl font-bold no-underline flex" to="/">bilson <span className="text-red-500 text-4xl">.</span> </Link>
             </div>
             <div>
               <h3 className="text-base-content mb-1.5 text-2xl font-semibold">
-                Sign in to FlyonUI
+                Sign in to  <Link className="link text-base-content link-neutral text-xl font-bold no-underline flex" to="/">bilson <span className="text-red-500 text-xl">.</span> </Link>
               </h3>
               <p className="text-base-content/80">
-                Ship Faster and Focus on Growth.
+                Your favorite photographer
               </p>
             </div>
 

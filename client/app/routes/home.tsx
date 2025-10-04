@@ -26,6 +26,7 @@ import { motion } from "motion/react";
 import About from "~/comps/About";
 import Pricing from "~/comps/Pricing";
 import Contact from "~/comps/Contact";
+import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -135,7 +136,7 @@ export default function Home() {
        
       </LightGallery>
 
-      <button className="btn btn-primary uppercase">See More</button>
+      <Link to="/portfolio" className="btn btn-primary uppercase">See More</Link>
 
       </div>
       <Contact/>

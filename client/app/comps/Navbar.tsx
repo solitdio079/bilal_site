@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { useUserStore } from "../utils/stateStore";
 
 export default function Navbar(){
@@ -21,15 +21,14 @@ export default function Navbar(){
       <ul className="menu md:menu-horizontal gap-2 p-0 text-base max-md:mt-2">
        
       
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/portfolio">Portfolio</NavLink></li>
 
         {!user.fullName ?  <li><Link to="/login">Login</Link></li> : <>
           <li><Link to="/admin">Account</Link></li>
           <li><Link to="/logout">Logout</Link></li>
         </>}
-        <li><a href="#">Blog</a></li>
+        <li><NavLink to="/blog">Blog</NavLink></li>
        
       </ul>
     </div>
